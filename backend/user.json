@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome",
+    "definitions": {
+        "Welcome": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "user": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/User"
+                    }
+                }
+            },
+            "required": [
+                "user"
+            ],
+            "title": "Welcome"
+        },
+        "User": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "contact": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "contact",
+                "email",
+                "name",
+                "password"
+            ],
+            "title": "User"
+        }
+    }
+}
